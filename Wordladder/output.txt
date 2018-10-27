@@ -1,3 +1,4 @@
-head,12
-love,15
-bozo,0
+head,heal,hell,tell,tall,tail
+love,dove
+bozo,bote
+sell,seal,sear,star

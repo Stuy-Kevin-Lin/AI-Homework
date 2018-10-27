@@ -1,3 +1,4 @@
-head
-love
-bozo
+head,tail
+love,dove
+bozo,bote
+sell,star
