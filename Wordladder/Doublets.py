@@ -259,4 +259,24 @@ def writeOut(infile,outfile):
         out += '\n'
         outfile.write(out)
 
-writeOut(sys.argv[1],sys.argv[2])
+import random;
+
+def testSynonyms(word1,word2):
+    avgDiff = []
+    success = 0
+    while success < 10:
+        compareto = random.choice(words[len(word1)])
+        test1 = doubletsAStar(word1,compareto)
+        test2 = doubletsAStar(word2,compareto)
+        if len(test2) == 2 and len(test1) == 2:
+            if dist(word2,compareto) > 1 and dist(word1,compareto) > 1:
+                continue
+        diff = abs(len(test1) - len(test2))
+        success += 1
+        print(compareto,test1,test2)
+        avgDiff.append(diff)
+    print(avgDiff)
+    return sum(avgDiff)/10
+
+print(testSynonyms('dumb','daft'))
+#writeOut(sys.argv[1],sys.argv[2])
