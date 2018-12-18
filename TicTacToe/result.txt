@@ -1,0 +1,3 @@
+ABCD
+move=5
+Best move: middle-right. Draw in 9 moves.
